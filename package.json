@@ -1,0 +1,36 @@
+{
+  "name": "design-tee",
+  "version": "1.0.0",
+  "description": "Design a t-shirt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "build": "webpack --config ./webpack.config.js --mode development -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taite510/hr-lax47-mvp.git"
+  },
+  "author": "Taite Jernigan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taite510/hr-lax47-mvp/issues"
+  },
+  "homepage": "https://github.com/taite510/hr-lax47-mvp#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.64.4"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
+  }
+}
