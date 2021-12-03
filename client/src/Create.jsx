@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Shirt from './Shirt.jsx'
 
 function Create(props) {
 
@@ -22,13 +23,11 @@ function Create(props) {
 
   return (
     <React.Fragment>
-      <div className='tshirt' style={shirtDesign}>
-        <img className='canvas' src='./tshirt.png'/>
-      </div>
+      <Shirt design={shirtDesign}/>
       <form onSubmit={handleSubmit}>
         <label htmlFor='image-url'>Image Url:</label><br/>
         <input id='image-url' name='image-url'></input>
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Add"/>
       </form>
     </React.Fragment>
   )
