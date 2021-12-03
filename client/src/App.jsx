@@ -1,10 +1,12 @@
 import React from 'react';
+import Create from './Create.jsx';
 
 function App(props) {
-
-
   return (
-    <h1>Hello world</h1>
+    <React.Fragment>
+      <h1>Design Tee</h1>
+      <Create />
+    </React.Fragment>
   )
 }
 

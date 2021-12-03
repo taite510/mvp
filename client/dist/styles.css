@@ -1,0 +1,12 @@
+.tshirt {
+  position: relative;
+  width: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.canvas {
+  margin: auto;
+  display: block;
+  z-index: 2;
+}
