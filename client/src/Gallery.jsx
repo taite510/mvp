@@ -1,7 +1,17 @@
-import React from 'react';
-import ShirtModule from './ShirtModule.jsx'
+import React, { useState, useEffect } from 'react';
+import ShirtModule from './ShirtModule.jsx';
+import { getAllShirts } from '../../server/API.js';
 
 function Gallery(props) {
+  const [ shirtData, setShirtData ] = useState(null);
+
+
+  useEffect(() => {
+    getAllShirts((data) => {
+      setShirtData(data)
+    })
+  }, [])
+
 
   let data = [
     {
@@ -23,14 +33,21 @@ function Gallery(props) {
       styles: {}
     }
   ]
-
-  return (
-    <div className='gallery'>
-      {data.map((imgData, index) => {
-        return <ShirtModule data={imgData} key={index}/>
-      })}
-    </div>
-  )
+  if (shirtData !== null) {
+    return (
+      <div className='gallery'>
+        {shirtData.map((imgData, index) => {
+          return <ShirtModule data={imgData} key={index}/>
+        })}
+      </div>
+    )
+  } else {
+    return (
+      <div className='jackie-chan'>
+        <img src='spiffygif_46x46.gif' alt="loading gif while page load"/>
+      </div>
+    )
+  }
 }
 
 export default Gallery;

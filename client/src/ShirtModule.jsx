@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import Shirt from './Shirt.jsx';
-// &#9825; &#9829;
+import { likeShirt } from '../../server/API.js';
+
 function ShirtModule(props) {
 
   const [like, setLike] = useState(false)
 
   let handleLike = () => {
     if (!like) {
-      props.data.likes++
-      setLike(true)
+      likeShirt(props.data.id, (data) => {
+        props.data.likes++
+        setLike(true)
+      })
     }
   }
 
   let shirtDesign = {
-    'backgroundImage': `url(${props.data.url})`,
+    'backgroundImage': `url(${props.data.imgUrl})`,
     'backgroundSize': '60%'
   }
 
