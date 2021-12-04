@@ -16,19 +16,21 @@ function ShirtModule(props) {
   }
 
   let shirtDesign = {
-    'backgroundImage': `url(${props.data.imgUrl})`,
-    'backgroundSize': '60%'
+    backgroundImage: `url(${props.data.imgUrl})`,
+    backgroundSize: props.data.styles.backgroundSize,
+    backgroundPosition: props.data.styles.positionX + props.data.styles.positionY,
+    backgroundColor: props.data.styles.backgroundColor
   }
 
   let heartStyle = {
-    color: like ? 'red' : 'gray'
+    color: like ? 'red' : 'rgb(160, 160, 160)'
   }
 
   return (
     <div className='shirt-module'>
       <Shirt design={shirtDesign}/>
       <div className='overlay'>
-        OVERLAY
+        <span className='created-by'>Created by </span><span className='creator'>{props.data.creator}</span>
         <span onClick={handleLike} style={heartStyle}> &#9829; </span>
         {props.data.likes}
       </div>

@@ -1,7 +1,26 @@
+#app {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+hr {
+  background-color: transparent;
+  display: block;
+  height: 1px;
+  border-width: 0;
+  border-top: 1px solid #d4d4d4;
+  line-height: 19px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
 .tshirt {
   position: relative;
   width: 500px;
-  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -14,18 +33,22 @@
 
 
 .create-button {
-  width: 100px;
-  height: 50px;
-  border-radius: 3px;
-  border: 1px solid #e5e5e5;
+  width: 130px;
+  height: 60px;
+  border-radius: 5px;
+  border: 1.5px solid #e5e5e5;
   box-sizing: border-box;
-  font-weight: 500;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 16pt;
   transition: all 0.2s;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   background-color: #499bec;
   color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .create-button:hover {
@@ -34,24 +57,29 @@
   cursor: pointer;
 }
 
-
+.sort {
+  position: absolute;
+  right: 20px;
+  top: 122px;
+  font-size: 22px;
+}
 
 /* ================================
 ============= GALLERY =============
 ================================ */
 
 .gallery .tshirt {
-  width: 200px;
-  height: 190px
+  width: 300px;
+  height: fit-content
 }
 
 .shirt-module {
   position: relative;
-  border: 2px solid #0e86d6;
+  border: 2px solid #a7a7a7;
   border-radius: 5px;
   display: inline-flex;
   margin: 10px;
-  height: 220px;
+  height: 320px;
   padding: 5px;
 }
 
@@ -63,3 +91,75 @@
   width: 100%;
   height: 25px
 }
+.created-by {
+  font-style: italic;
+}
+.creator {
+  font-weight: 700;
+}
+
+/* ================================
+============= CREATE ==============
+================================ */
+
+.create-page > div {
+  margin: 0 auto;
+}
+
+.create-page {
+  font-size: 22px;
+}
+
+.create-form {
+  padding: 10px 0;
+}
+.create-form > * {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: stretch;
+}
+.color-adjust {
+  width: auto;
+}
+
+.url-form form {
+  width: 396.09px;
+}
+#image-url {
+  width: 83.2%;
+}
+
+/* ================================
+============= HEADER ==============
+================================ */
+
+header {
+  position: relative;
+  width: auto;
+  height: fit-content;
+  margin-left: 5px;
+}
+header * {
+  display: inline-block;
+  width: fit-content;
+  margin: auto, 0;
+}
+header img {
+  position: absolute;
+  height: 65px;
+  top: 8px;
+}
+
+header h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 32pt;
+  font-style: italic;
+  color: rgb(58, 58, 58);
+  margin: 18px 8px 18px 0;
+}
+

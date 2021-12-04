@@ -13,7 +13,11 @@ function App(props) {
   if (!create) {
     return (
       <React.Fragment>
-        <h1>Design Tee</h1>
+        <header>
+          <h1>Design Tee </h1>
+          <img src='./tshirtlogo.png'/>
+        </header>
+        <hr/>
         <div onClick={handleCreateChange} className='create-button'><h2>Create!</h2></div>
         <Gallery/>
       </React.Fragment>
@@ -21,7 +25,11 @@ function App(props) {
   } else {
     return (
       <React.Fragment>
-        <h1>Design Tee</h1>
+        <header>
+          <h1>Design Tee</h1>
+          <img src='./tshirtlogo.png'/>
+        </header>
+        <hr/>
         <Create/>
       </React.Fragment>
     )
